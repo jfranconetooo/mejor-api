@@ -28,8 +28,3 @@ There are 2 ways to test this app:
 
   - You can turn your account into a developer account [here](https://www.instagram.com/developer) and create a client. 
     After do this add the CLIENT_ID and CLIENT_SECRET into /auth/config.js. Obs: In the creation of the client the callback url should be `http://localhost:5000/auth/instagram/callback.`.
-  
-  
-## Impediments
-
-  It was not possible to mark the dates already marked, the library I used is very powerful and certainly can do, but for lack of time and the complexity of this application will not give time. : [
