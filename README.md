@@ -15,3 +15,21 @@ To access the your owner database, change the DB_USER,  DB_PASSWORD and the Mong
 ## Email info
 
 /utils/schedules.js
+
+## Important !!
+
+To auth with Instagram you need add a user for test into a sandbox client.
+
+There are 2 ways to test this app:
+
+ - Add your user to my sandbox app from the Mejor App. Your account needs to be a developer account as well. You will need to accept the invitation to test the app on [here](https://www.instagram.com/developer/clients/sandbox_invites/).
+  
+  or
+
+  - You can turn your account into a developer account [here](https://www.instagram.com/developer) and create a client. 
+    After do this add the CLIENT_ID and CLIENT_SECRET into /auth/config.js. Obs: In the creation of the client the callback url should be `http://localhost:5000/auth/instagram/callback.`.
+  
+  
+## Impediments
+
+  It was not possible to mark the dates already marked, the library I used is very powerful and certainly can do, but for lack of time and the complexity of this application will not give time. : [
