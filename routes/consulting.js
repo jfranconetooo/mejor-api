@@ -57,7 +57,7 @@ router.post('/my-consultings', function(req, res, next) {
 
   Consulting.find({
     user: data.userId
-  }, "_id date", ).exec(function(err, consultings) {
+  }, "_id date").exec(function(err, consultings) {
     if (err) next(err);
     return res.status(200).send(consultings);
   });
