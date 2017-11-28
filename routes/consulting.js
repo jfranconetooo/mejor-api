@@ -27,6 +27,21 @@ router.get('/dates-enabled', function(req, res, next) {
 });
 
 
+router.get('/dates-unavailable', function(req, res, next) {
+  var datesUnavailable = [];
+
+  Consulting.find({}, "date", function(err, consultings){
+    if(err) return res.status(400);
+  
+    for (var i = 0, len = consultings.length; i < len; i++) {
+      datesUnavailable.push(consultings[i].date);
+    };
+
+    return res.status(200).send(datesUnavailable);
+  });
+});
+
+
 /* Schedule consulting. */
 router.post('/schedule', checkIfDateIsAvaiable, function(req, res, next) {
   var data = req.body;
@@ -57,7 +72,7 @@ router.post('/my-consultings', function(req, res, next) {
 
   Consulting.find({
     user: data.userId
-  }, "_id date", ).exec(function(err, consultings) {
+  }, "_id date").exec(function(err, consultings) {
     if (err) next(err);
     return res.status(200).send(consultings);
   });
