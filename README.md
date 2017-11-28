@@ -1,6 +1,6 @@
 # Mejor-Api
 
-This project implementend with NodeJs.
+This project is implemented using Nodejs with Expressjs.
 
 ## Install and Run 
 
