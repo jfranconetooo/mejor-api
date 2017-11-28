@@ -18,12 +18,12 @@ var transporter = nodemailer.createTransport({
 
 function send_email_notice() {
   var j = schedule.scheduleJob('*/2 7-17 1-30 12 5', function() {
-    var _24HrsAgo = moment().add(1, 'd');
+    var _24HrsAfter = moment().add(1, 'd');
 
     Consulting.find({
         date: {
-          $gte: _24HrsAgo.subtract(1, 'm').toDate(),
-          $lt: _24HrsAgo.add(1, 'm').toDate()
+          $gte: _24HrsAfter.subtract(1, 'm').toDate(),
+          $lt: _24HrsAfter.add(1, 'm').toDate()
         }
       })
       .populate('user')
