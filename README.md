@@ -22,7 +22,7 @@ To auth with Instagram you need add a user for test into a sandbox client.
 
 There are 2 ways to test this app:
 
- - Add your user to my sandbox app from the Mejor App
+ - Add your user to my sandbox app from the Mejor App. Your account needs to be a developer account as well. You will need to accept the invitation to test the app on [here](https://www.instagram.com/developer/clients/sandbox_invites/).
   
   or
 
