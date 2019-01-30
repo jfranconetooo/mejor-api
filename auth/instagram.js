@@ -12,6 +12,7 @@ passport.use(new InstagramStrategy({
   },
   // linkedin sends back the tokens and progile info
   function(accessToken, refreshToken, profile, done) {
+    console.log(profile);
     var profile = profile._json.data;
     var userDB;
 
